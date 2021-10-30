@@ -1,0 +1,112 @@
+{% extends "_Layout.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %} 
+<div class="homepage">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+      <div class="carousel-inner">          
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="carousel-caption"  data-aos="zoom-out">
+              <div class="typewriter">
+                <div class="typewriter-text">Become a Typing Pro.</div>
+              </div>
+              <p></p>
+              <img src="static/images/Logo.png" width="450px" height="300px">
+              <p><a class="btn btn-lg btn-primary" href="/main" role="button">Get Started</a></p>
+            </div>
+          </div>
+        </div>         
+      </div>        
+    </div>
+
+    <div class="container marketing">
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-4">
+          <img src="static/images/keyboard2.png" width="140" height="140">
+          <h2>Improve your Hand Posture</h2>
+          <p>By using our project, you will be able to improve both your typing skills and hand posture.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="static/images/microphone.png" width="140" height="140">
+          <h2>Voice Over Functionality</h2>
+          <p>Everytime you press a key with the wrong finger, we will let you know which key you pressed by sound.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="static/images/webcam.png" width="140" height="140">
+          <h2>100% Online</h2>
+          <p>All you need is a webcam, keyboard, and web browser. Easy to setup and use for your convenience.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette"  data-aos="fade-right">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Learn how to type the right way. <span class="text-muted">Practice makes perfect.</span></h2>
+          <p class="lead">
+            Our project will record and evaluate every user’s hand position while typing by the webcams. 
+            Then, by selecting the important keys, we will be able to outline each key so that keyboarding helper can have a good idea of where the keyboard and each key is located. 
+            Our application will then evaluate the user’s hand posture while typing, which will then trigger our live feedback system, letting the user know their progress in real time.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" img src="static/images/keyboard.png">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" data-aos="fade-left">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">View your progress. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">
+            Keyboarding Helper allows users to go to their respective dashboard. 
+            Our system analyzes the user’s typing and outputs various data visualizations. 
+            Such examples that are provided are mistakes distribution, typing speed, average correctness, and much more.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" img src="static/images/dashboard.png">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" data-aos="fade-right">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">More convenient than classrooms. <span class="text-muted">Easier and faster.</span></h2>
+          <p class="lead">
+            Imagine you are an instructor who is trying to teach 100 students how to type. 
+            It would be challenging to monitor
+            every single student’s progress towards their hand’s posture while typing. 
+            Most, if not all, websites do not have a monitoring system for hand posturing.
+            Keyboarding Helper aims to eliminate all these issues for instructors or
+            for anyone who wants to learn how to type.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" img src="static/images/desk.png">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+    </div>
+
+    <div class="contact" data-aos="zoom-in">
+      <h1>Contact Us!</h1>
+      <form class="cf">
+        <div class="half left cf">
+          <input type="text" id="input-name" placeholder="Name">
+          <input type="email" id="input-email" placeholder="Email address">
+          <input type="text" id="input-subject" placeholder="Subject">
+        </div>
+        <div class="half right cf">
+          <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+        </div>  
+        <input type="submit" value="Submit" id="input-submit">
+      </form>
+    </div>
+</div>
+{% endblock %}
