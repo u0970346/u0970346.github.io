@@ -294,7 +294,6 @@ body {
   overflow: hidden;
   letter-spacing: 2px;
   animation: typing 3s steps(20, end), blink .75s step-end infinite;
-  animation-delay: 0.5s;
   white-space: nowrap;
   font-size: 50px;
   font-weight: 700;
