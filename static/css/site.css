@@ -1,0 +1,415 @@
+/**
+  Author:    Ping Cheng Chung
+  Partner:   Michael Blum, Shiyang Li, Sungyeon Han
+  Date:      10/25/2021
+  University of Utah
+ */
+
+ #canvas {
+  width: 960px;
+  height: 540px;
+  border: 0px solid transparent;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#webcam {
+  max-width: 100%;
+}
+
+#color_Q {
+  background: #e0a800;
+
+}
+
+#color_A {
+  background: #dc3545;
+}
+
+#color_Z {
+  background: #28a745;
+}
+
+#color_M {
+  background: hsl(205deg 100% 57%);
+}
+
+.dot {
+  position: absolute;
+  cursor: move;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%
+}
+
+.buffer {
+  width: 50px;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+.button-div {
+  margin: 15px;
+}
+
+#record-div {
+  display: none;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.guideline {
+  color: #2196f3;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#table-div {
+  border: 5px;
+  margin: 5px;
+  display: none;
+}
+
+#set-div {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.table-row {
+  cursor: pointer;
+}
+
+#user_name_input {
+  margin-left: 10px;
+  width: 10vw;
+}
+
+#dashboard {
+}
+
+.help_background {
+  background-color: #5a6268;
+  width: 25px;
+  height: 20px;
+}
+
+.delete-icon {
+  width: 55px;
+  cursor: pointer;
+  transform: translateX(-65px);
+  position: relative;
+  z-index: 1;
+  transition: 0.25s;
+  border-radius: 25px;
+}
+
+.delete-icon:hover {
+  box-shadow: 1px 3px 4px 2px rgb(0 0 0 / 60%);
+}
+
+.button-div:hover .delete-icon {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: translateX(10px) rotate(360deg);
+}
+.target-key {
+  position: relative;
+  z-index: 2;
+}
+
+.target-key:hover {
+  box-shadow: 2px 4px 9px 2px rgb(0 0 0 / 60%);
+}
+
+.btn-yellow {
+  color: black;
+  background-color: hsl(45deg 100% 51%);
+  border-color: hsl(45deg 100% 51%);
+}
+
+.btn-yellow:hover {
+  color: white;
+  background: hsl(45deg 100% 50% / 87%);
+  border-color: hsl(45deg 100% 50% / 87%);
+}
+
+.btn-red {
+  color: white;
+  background-color: hsl(354deg 70% 54%);
+  border-color: hsl(354deg 70% 54%);
+}
+
+.btn-red:hover {
+  color: black;
+  background-color: hsl(354deg 100% 53% / 87%);
+  border-color: hsl(354deg 100% 53% / 87%);
+}
+.btn-green {
+  color: black;
+  background-color: hsl(134deg 61% 41%);
+  border-color: hsl(134deg 61% 41%);
+}
+
+.btn-green:hover {
+  color: white;
+  background: hsl(134deg 61% 41%/87%);
+  border-color: hsl(134deg 61% 41%/87%);
+}
+.btn-blue {
+  color: white;
+  background-color: hsl(205deg 100% 57%);
+  border-color: hsl(205deg 100% 57%);
+}
+
+.btn-blue:hover {
+  color: black;
+  background: hsl(205deg 100% 57% / 87%);
+  border-color: hsl(205deg 100% 57% /87%);
+}
+.disabled {
+  cursor: not-allowed;
+}
+#quit_button:hover {
+  background: hsl(0deg 86% 53%);
+  transform: scale(1.3);
+  box-shadow: 3px 5px 10px 0px grey;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.stream-div{
+  min-width:960px;
+  margin-left:35px;
+}
+#control_panel{
+  min-width:200px;
+}
+.my-row{
+  flex-wrap:nowrap;
+  display: flex;
+}
+#user_name_input{
+  min-width:160px;
+}
+
+body {
+  padding-bottom: 3rem;
+  color: gray;
+  transition: 1s background ease;
+}
+
+.homepage{
+  margin-top: -15px;
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+}
+
+.carousel-item {
+  height: 42rem;
+  background-image: url("/static/images/water.jpg");
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+.featurette-divider {
+  border-color: rgb(228, 228, 228);
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+.typewriter {
+  font-family: Courier, monospace;
+  display: inline-block;
+  text-align: center;
+}
+
+.typewriter-text {
+  color: black;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 3s steps(20, end), blink .75s step-end infinite;
+  animation-delay: 0.5s;
+  white-space: nowrap;
+  font-size: 50px;
+  font-weight: 700;
+  border-right: 4px solid orange;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+  from { 
+      width: 0% 
+  }
+  to { 
+      width: 100% 
+  }
+}
+
+@keyframes blink {
+  from, to { 
+      border-color: transparent 
+  }
+  50% { 
+      border-color: black; 
+  }
+}
+
+.featurette-image:hover {
+  transform: scale(1.2); 
+}
+
+#icon {
+  width: 30px;
+  cursor: pointer;
+} 
+
+.dark-mode{
+  background-color: black;
+  color: white;
+  transition: 1s all ease;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+h1 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+form input,
+form textarea {
+  border: 1;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: "Merriweather", sans-serif;
+  resize: none;
+}
+
+form #input-submit {
+  color: white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+form textarea {
+  height: 186px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right {
+  width: 50%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+
+.dashboard, .help, .homepage, .index  { padding-top: 95px; }
+
+.navbar{
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
